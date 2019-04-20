@@ -91,13 +91,24 @@ age.
 Specifications
 ^^^^^^^^^^^^^^
 
-#.  Open ``task_02.py``
+#.  One a new cell in your notebook, type the following function
+
+.. code:: pycon
+
+    >>> import datetime
+    
+    class InvalidAgeError(Exception):
+    pass
+    
+    def get_age(birthyear):
+    age = datetime.datetime.now().year - birthyear
+    return age
 
 #.  Add a check that tests whether or not the person has a valid (0 or greater)
 
 #.  If the age is invalid, raise an ``InvalidAgeError``
 
-Examples
+Expected Output
 ^^^^^^^^
 
 .. code:: pycon
