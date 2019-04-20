@@ -53,10 +53,11 @@ Specifications
 
 #.  On a new notebook, paste function below
 
-.. code:: pycon 
 
-def simple_lookup(var1, var2):
-    return var1[var2]
+.. code:: pycon
+
+    >>> def simple_lookup(var1, var2)
+            return var1[var2]
 
 #.  Add exception handling to the ``simple_lookup()`` function so that
     attempts to access any index or key of ``var1`` that do not exist will
