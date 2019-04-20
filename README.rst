@@ -69,7 +69,7 @@ Specifications
 
     There is a single exception class that suits this best.
     
-Example
+Expected Output
 ^^^^^^^
 
 .. code:: pycon
