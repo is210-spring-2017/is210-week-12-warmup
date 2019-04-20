@@ -97,12 +97,12 @@ Specifications
 
     >>> import datetime
     
-    class InvalidAgeError(Exception):
-    pass
+    >>> class InvalidAgeError(Exception):
+        pass
     
-    def get_age(birthyear):
-    age = datetime.datetime.now().year - birthyear
-    return age
+    >>> def get_age(birthyear):
+            age = datetime.datetime.now().year - birthyear
+            return age
 
 #.  Add a check that tests whether or not the person has a valid (0 or greater)
 
@@ -118,89 +118,7 @@ Expected Output
       File "<stdin>", line 1, in <module>
     __main__.InvalidAgeError
 
-Task 03
--------
 
-The ``finally`` clause is particularly useful in handling cleanup tasks such
-as closing file descriptors or data streams.
-
-Specifications
-^^^^^^^^^^^^^^
-
-#.  Open ``task_03.py``. This class represents a very simple logging class.
-    Python offers much-better built-in loggers but this is a good teaching
-    example.
-
-#.  Modify ``flush()`` so that any predictable errors are caught and are,
-    themselves, logged.
-
-    #.  If the target logfile cannot be opened, log this fact then re-raise
-        the error.
-
-    #.  Upon encountering any other ``IOError``, log the error and stop loop
-        loop processing (but continue with the rest of the program)
-
-    #.  Do not allow stored messages to be removed from the ``msgs`` object if
-        they cannot be written to the disk.
-
-    #.  Allow msgs processing to continue as long as it doesn't encounter an
-        ``IOError``
-
-    #.  Upon encountering any other error, use the ``log()`` method to log the
-        error encountered
-
-#.  Ensure that the ``close()`` method is called no matter what exceptions are
-    encountered.
-
-.. note::
-
-    Unit testing will be limited in this particular question as exception
-    handling largely defeats changes in program state and, to be frank, Python
-    is just really good with polymorphism. There's almost nothing that can
-    trigger an exception with str()!
-
-Executing Tests
-===============
-
-Code must be functional and pass tests before it will be eligible for credit.
-
-Linting
--------
-
-Lint tests check your code for syntactic or stylistic errors To execute lint
-tests against a specific file, simply open a terminal in the same directory as
-your code repository and type:
-
-.. code:: console
-
-    $ pylint filename.py
-
-Where ``filename.py`` is the name of the file you wish to lint test.
-
-Unit Tests
-----------
-
-Unit tests check that your code performs the tested objectives. Unit tests
-may be executed individually by opening a terminal in the same directory as
-your code repository and typing:
-
-.. code:: console
-
-    $ nosetests tests/name_of_test.py
-
-Where ``name_of_test.py`` is the name of the testfile found in the ``tests``
-directory of your source code.
-
-Running All Tests
------------------
-
-All tests may be run simultaneously by executing the ``runtests.sh`` script
-from the root of your assignment repository. To execute all tests, open a
-terminal in the same directory as your code repository and type:
-
-.. code:: console
-
-    $ ./runtests.sh
 
 Submission
 ==========
